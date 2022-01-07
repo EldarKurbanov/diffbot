@@ -1,7 +1,7 @@
 repositories:
-  src/rplidar_ros:
+  src/ydlidar_ros:
     type: git
-    url: https://github.com/Slamtec/rplidar_ros
+    url: https://github.com/EldarKurbanov/ydlidar_ros
     version: master
   src/raspicam_node:
     type: git
