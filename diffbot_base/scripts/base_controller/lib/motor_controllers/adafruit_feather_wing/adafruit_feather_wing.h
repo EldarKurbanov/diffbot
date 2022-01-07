@@ -38,7 +38,7 @@ namespace diffbot {
              * \param motor_num Number of the motor to control (one of 1, 2, 3, 4). Diffbot uses motors 3 and 4.
              * \param addr i2c address used to communicate with the motor driver.
              */
-            AdafruitMotorController(uint8_t motor_num, uint8_t addr=0x60);
+            AdafruitMotorController(uint8_t motor_num, uint8_t addr=0x0f);
 
             /** \brief Initializes the communication with the motor driver
              * 
