@@ -1,14 +1,14 @@
 
 
 /// Encoder pins
-#define ENCODER_LEFT_H1 5
-#define ENCODER_LEFT_H2 6
+#define ENCODER_LEFT_H1 6
+#define ENCODER_LEFT_H2 5
 // Encoder resolution used for initialization 
 // will be read from parameter server
 #define ENCODER_RESOLUTION 542
 
-#define ENCODER_RIGHT_H1 7
-#define ENCODER_RIGHT_H2 8
+#define ENCODER_RIGHT_H1 8
+#define ENCODER_RIGHT_H2 7
 
 /// Motor i2c address
 #define MOTOR_DRIVER_ADDR 0x0f

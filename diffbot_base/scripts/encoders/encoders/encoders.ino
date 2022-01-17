@@ -11,7 +11,7 @@
 
 #include <ros.h>
 //#include <std_msgs/Int32.h>
-#include <diffbot_msgs/Encoders.h>
+#include <diffbot_msgs/EncodersStamped.h>
 #include <std_msgs/Empty.h>
 
 #include <Encoder.h>
@@ -21,8 +21,8 @@
 //   Best Performance: both pins have interrupt capability
 //   Good Performance: only the first pin has interrupt capability
 //   Low Performance:  neither pin has interrupt capability
-Encoder encoderLeft(5, 6);  // Default pins 5, 6
-Encoder encoderRight(7, 8); // Default pins 7, 8
+Encoder encoderLeft(6, 5);  // Default pins 5, 6
+Encoder encoderRight(8, 7); // Default pins 7, 8
 //   avoid using pins with LEDs attached
 
 ros::NodeHandle  nh;
@@ -41,7 +41,7 @@ ros::Subscriber<std_msgs::Empty> sub_reset("reset", resetCallback);
 
 // ROS Publisher setup to publish left and right encoder ticks
 // This uses the custom encoder ticks message that defines an array of two integers
-diffbot_msgs::Encoders encoder_ticks;
+diffbot_msgs::EncodersStamped encoder_ticks;
 ros::Publisher pub_encoders("encoder_ticks", &encoder_ticks);
 
 void setup() 
@@ -68,8 +68,8 @@ void loop() {
   newLeft = encoderLeft.read();
   newRight = encoderRight.read();
 
-  encoder_ticks.ticks[0] = newLeft;
-  encoder_ticks.ticks[1] = newRight;
+  encoder_ticks.encoders.ticks[0] = newLeft;
+  encoder_ticks.encoders.ticks[1] = newRight;
   pub_encoders.publish(&encoder_ticks);
   nh.spinOnce();
   // Use at least a delay of 3 ms on the work pc and 5 ms on the Raspberry Pi
