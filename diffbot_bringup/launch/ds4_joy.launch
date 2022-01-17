@@ -3,6 +3,10 @@
   <arg name="addr" default="" />
   <arg name="use_standard_msgs" default="true" />
   <arg name="autorepeat_rate" default="0" if="$(arg use_standard_msgs)" />
+  <arg name="teleop_config" default="$(find joy_teleop)/config/joy_teleop_example.yaml" />
+
+  <rosparam file="$(arg teleop_config)" command="load" />
+
 
   <node pkg="ds4_driver" type="ds4_driver_node.py" name="ds4_driver" output="screen" >
     <rosparam command="load" file="$(find ds4_driver)/config/params.yaml" />
