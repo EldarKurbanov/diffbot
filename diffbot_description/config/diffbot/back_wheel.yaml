@@ -2,9 +2,9 @@ wheel:
 # Wheel mass in Kilograms
   mass: 1.0         
 # Wheel radius in meters
-  radius: 0.053     
+  radius: 0.02     
 # Wheel length in meters, considering is as a cylinder
-  length: 0.033     
+  length: 0.02     
 # Name of the mesh files. Leave it empty ('') to have a red wheel.  
   mesh: ''     
 # Offset distance, in meters, from the outer face of the base to the center of the wheel.
