@@ -1,5 +1,5 @@
 <launch>
-    <arg name="laser_frame_id" default="rplidar_gpu_laser_link" />
+    <arg name="laser_frame_id" default="rplidar_laser_link" />
     <!--arg name="model" default="$(env DIFFBOT_MODEL)" doc="model type [diffbot, remo]"/-->
     <arg name="model" default="diffbot" doc="model type [diffbot, remo]"/>
 
