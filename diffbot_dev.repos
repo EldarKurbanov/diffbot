@@ -11,3 +11,8 @@ repositories:
     type: git
     url: https://github.com/naoki-mizuno/ds4_driver
     version: melodic-devel
+  src/aws-robomaker-small-house-world:
+    type: git
+    url: https://github.com/aws-robotics/aws-robomaker-small-house-world
+    version: ros1
+

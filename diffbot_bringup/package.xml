@@ -50,7 +50,7 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>teleop_twist_keyboard</exec_depend>
-  <exec_depend>joy_teleop</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
   <exec_depend>ds4_driver</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
