@@ -10,7 +10,7 @@
 
 using namespace diffbot;
 
-AdafruitMotorController AMC = AdafruitMotorController(3);
+AdafruitMotorController AMC = AdafruitMotorController(2, MOTOR_DRIVER_ADDR);
 MotorControllerIntf<Adafruit_MotorShield>* pMotorController = &AMC;
 
 

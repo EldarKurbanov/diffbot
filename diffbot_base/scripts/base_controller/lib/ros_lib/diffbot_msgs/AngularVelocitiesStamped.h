@@ -25,7 +25,7 @@ namespace diffbot_msgs
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const override
+    virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
       offset += this->header.serialize(outbuffer + offset);
@@ -33,7 +33,7 @@ namespace diffbot_msgs
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer) override
+    virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
@@ -41,8 +41,8 @@ namespace diffbot_msgs
      return offset;
     }
 
-    virtual const char * getType() override { return "diffbot_msgs/AngularVelocitiesStamped"; };
-    virtual const char * getMD5() override { return "62b2cae704bd641c35dea902c2913994"; };
+    const char * getType(){ return "diffbot_msgs/AngularVelocitiesStamped"; };
+    const char * getMD5(){ return "62b2cae704bd641c35dea902c2913994"; };
 
   };
 

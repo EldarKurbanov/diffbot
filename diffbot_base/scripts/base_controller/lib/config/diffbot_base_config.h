@@ -11,9 +11,9 @@
 #define ENCODER_RIGHT_H2 7
 
 /// Motor i2c address
-#define MOTOR_DRIVER_ADDR 0x0f
-#define MOTOR_LEFT 3
-#define MOTOR_RIGHT 4
+#define MOTOR_DRIVER_ADDR 0x60
+#define MOTOR_LEFT 1
+#define MOTOR_RIGHT 2
 
 #define K_P 0.6 // P constant
 #define K_I 0.3 // I constant

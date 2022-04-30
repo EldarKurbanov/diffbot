@@ -26,7 +26,7 @@ namespace diffbot_msgs
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const override
+    virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
       union {
@@ -62,7 +62,7 @@ namespace diffbot_msgs
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer) override
+    virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
       union {
@@ -101,8 +101,8 @@ namespace diffbot_msgs
      return offset;
     }
 
-    virtual const char * getType() override { return "diffbot_msgs/PID"; };
-    virtual const char * getMD5() override { return "08d0ca1f582560895ecba909de1d88ec"; };
+    const char * getType(){ return "diffbot_msgs/PID"; };
+    const char * getMD5(){ return "08d0ca1f582560895ecba909de1d88ec"; };
 
   };
 

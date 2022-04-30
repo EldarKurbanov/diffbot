@@ -19,8 +19,8 @@
     
   <!-- Motors -->
   <!-- Deprecated: Use when having a grove_motor_driver together with the grove_motor_driver ROS package -->
-  <node name="motor_driver" pkg="grove_motor_driver" type="motor_driver.py" respawn="false"
-      output="screen" ns="diffbot" />
+  <!--node name="motor_driver" pkg="grove_motor_driver" type="motor_driver.py" respawn="false"
+      output="screen" ns="diffbot" /-->
   
   <!-- Including the following launch file from diffbot_base package will -->
   <!-- Load the robot description onto the parameter server -->

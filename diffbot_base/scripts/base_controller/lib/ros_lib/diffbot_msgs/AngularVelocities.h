@@ -18,11 +18,11 @@ namespace diffbot_msgs
       _joint_type * joint;
 
     AngularVelocities():
-      joint_length(0), st_joint(), joint(nullptr)
+      joint_length(0), joint(NULL)
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const override
+    virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
       *(outbuffer + offset + 0) = (this->joint_length >> (8 * 0)) & 0xFF;
@@ -45,7 +45,7 @@ namespace diffbot_msgs
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer) override
+    virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
       uint32_t joint_lengthT = ((uint32_t) (*(inbuffer + offset))); 
@@ -73,8 +73,8 @@ namespace diffbot_msgs
      return offset;
     }
 
-    virtual const char * getType() override { return "diffbot_msgs/AngularVelocities"; };
-    virtual const char * getMD5() override { return "edecb4b6fff50f927a908742515e167a"; };
+    const char * getType(){ return "diffbot_msgs/AngularVelocities"; };
+    const char * getMD5(){ return "edecb4b6fff50f927a908742515e167a"; };
 
   };
 

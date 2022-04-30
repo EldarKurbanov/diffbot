@@ -21,22 +21,22 @@ namespace diffbot_msgs
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const override
+    virtual int serialize(unsigned char *outbuffer) const
     {
       int offset = 0;
       offset += this->angular_velocities.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer) override
+    virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
       offset += this->angular_velocities.deserialize(inbuffer + offset);
      return offset;
     }
 
-    virtual const char * getType() override { return "diffbot_msgs/WheelsCmd"; };
-    virtual const char * getMD5() override { return "85d3efcbf77039b4c3993e4dcc872362"; };
+    const char * getType(){ return "diffbot_msgs/WheelsCmd"; };
+    const char * getMD5(){ return "85d3efcbf77039b4c3993e4dcc872362"; };
 
   };
 
