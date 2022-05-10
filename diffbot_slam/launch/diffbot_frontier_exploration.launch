@@ -6,6 +6,9 @@
   <arg name="cmd_vel_topic" default="diffbot/mobile_base_controller/cmd_vel" />
   <arg name="odom_topic" default="diffbot/mobile_base_controller/odom" />
   <arg name="local_planner" default="dwb" doc="Local planner can be either dwa, base, teb or pose"/>
+  <arg name="move_forward_only" default="false"/>
+  <arg name="model" default="diffbot" doc="model type [diffbot, remo]"/>
+
 
   <!-- Diffbot and Gmapping -->
   <include file="$(find diffbot_slam)/launch/diffbot_gmapping.launch">
@@ -38,7 +41,7 @@
   <node pkg="frontier_exploration" type="explore_server" name="explore_server" output="screen" >
     <param name="frequency" type="double" value="1.0"/>
     <param name="goal_aliasing" type="double" value="$(arg sensor_range)"/>
-    <rosparam file="$(find diffbot_navigation)/config/costmap_common_params_$(arg model).yaml" command="load" ns="explore_costmap" />
+    <rosparam file="$(find diffbot_navigation)/config/costmap_common_params.yaml" command="load" ns="explore_costmap" />
     <rosparam file="$(find diffbot_slam)/config/frontier_exploration.yaml" command="load" ns="explore_costmap" />
   </node>
 </launch>
